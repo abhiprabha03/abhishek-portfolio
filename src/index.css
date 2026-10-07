@@ -1,0 +1,15 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { @apply bg-ink text-white font-sans antialiased overflow-x-hidden; }
+:focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .sect { @apply py-20 sm:py-24; }
+  .h2 { @apply text-2xl sm:text-3xl font-bold tracking-tight mb-10; }
+  .card { @apply rounded-lg border border-line bg-panel; }
+  .btn { @apply inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition-colors; }
+  .btn-p { @apply btn bg-accent text-white hover:bg-blue-400; }
+  .btn-s { @apply btn border border-line text-gray-200 hover:border-gray-500 hover:bg-white/5; }
+  .chip { @apply rounded border border-line bg-ink px-2 py-0.5 text-xs text-gray-400; }
+}
